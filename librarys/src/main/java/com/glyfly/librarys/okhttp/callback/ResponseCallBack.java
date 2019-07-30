@@ -1,10 +1,10 @@
 package com.glyfly.librarys.okhttp.callback;
 
+import com.glyfly.librarys.okhttp.model.ResponseModel;
 import com.zhy.http.okhttp.callback.Callback;
 
 import org.json.JSONObject;
 
-import okhttp.model.ResponseModel;
 import okhttp3.Response;
 
 public abstract class ResponseCallBack extends Callback<ResponseModel> {

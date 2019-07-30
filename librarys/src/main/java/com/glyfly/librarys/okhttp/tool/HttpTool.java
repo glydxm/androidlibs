@@ -17,14 +17,14 @@ public class HttpTool {
 
 	private static Map<String, String> headers = new HashMap<>();
 
-	public static HttpTool getInstance() {
+	public static HttpTool newInstance() {
 		if (httpTool == null) {
 			httpTool = new HttpTool();
 		}
 		return httpTool;
 	}
 
-	public static void initHeaders(Map<String, String> header) {
+	public void initHeaders(Map<String, String> header) {
 		if (header != null) {
 			headers.putAll(header);
 		}
@@ -38,7 +38,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数（可根据自己需求自定义）
 	 */
-	public static <T> void get(Context context, String url, Callback<T> callback) {
+	public <T> void get(Context context, String url, Callback<T> callback) {
 		OkHttpUtils.get()//
 				.url(url)//
 				.tag(context)
@@ -57,7 +57,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数（可根据自己需求自定义）
 	 */
-	public static <T> void get(Context context, String url, Map<String, String> params,
+	public <T> void get(Context context, String url, Map<String, String> params,
 							   Callback<T> callback) {
 		OkHttpUtils.get()//
 				.url(url)//
@@ -78,7 +78,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数（可根据自己需求自定义）
 	 */
-	public static <T> void getNoHeaders(Context context, String url, Map<String, String> params,
+	public <T> void getNoHeaders(Context context, String url, Map<String, String> params,
 							   Callback<T> callback) {
 		OkHttpUtils.get()//
 				.url(url)//
@@ -98,7 +98,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数（可根据自己需求自定义）
 	 */
-	public static <T> void get(Context context, String url, Map<String, String> params,
+	public <T> void get(Context context, String url, Map<String, String> params,
 							   Map<String, String> header, Callback<T> callback) {
 		if (header == null){
 			header = new HashMap<>();
@@ -123,7 +123,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数 （可根据自己需求自定义）
 	 */
-	public static <T> void post(Context context, String url, Callback<T> callback) {
+	public <T> void post(Context context, String url, Callback<T> callback) {
 		OkHttpUtils.post()//
 				.url(url)//
 				.tag(context)//
@@ -144,7 +144,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数（可根据自己需求自定义）
 	 */
-	public static <T> void post(Context context, String url, Map<String, String> params,
+	public <T> void post(Context context, String url, Map<String, String> params,
 								Callback<T> callback) {
 		OkHttpUtils.post()//
 				.url(url)//
@@ -170,7 +170,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数
 	 */
-	public static <T> void updateFile(Context context, String url, String key, File file,
+	public <T> void updateFile(Context context, String url, String key, File file,
 									  Callback<T> callback) {
 		OkHttpUtils.post()//
 				.addFile(key, file.getName(), file)//
@@ -197,7 +197,7 @@ public class HttpTool {
 	 * @param callback
 	 *            回调函数
 	 */
-	public static <T> void updateFile(Context context, String url, String keys, File file,
+	public <T> void updateFile(Context context, String url, String keys, File file,
 									  Map<String, String> params, Callback<T> callback) {
 		OkHttpUtils.post()//
 				.addFile(keys, file.getName(), file)//
@@ -224,7 +224,7 @@ public class HttpTool {
 	 *            回调函数
 	 */
 
-	public static <T> void updateFile(Context context, String url,
+	public <T> void updateFile(Context context, String url,
 									  String[] keys, File[] files, Callback<T> callback) {
 		PostFormBuilder Builder = OkHttpUtils.post();
 		for (int i = 0; i < files.length; i++) {

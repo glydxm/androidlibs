@@ -32,6 +32,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project.appcompat_v7
     implementation project.recyclerview_v7
+    implementation project.constraint
     implementation project.fresco
     implementation project.eventbus
     implementation project.bugly_upgrade

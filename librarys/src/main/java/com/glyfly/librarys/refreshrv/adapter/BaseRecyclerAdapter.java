@@ -1,6 +1,6 @@
 package com.glyfly.librarys.refreshrv.adapter;
 
-import android.app.Activity;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter {
 
-    protected Activity activity;
+    protected Context context;
     protected List<T> data;
     protected int layout;
     protected LayoutInflater inflater;
@@ -30,11 +30,11 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter {
         this.onItemClickListener = onItemClickListener;
     }
 
-    public BaseRecyclerAdapter(Activity activity, int layout) {
-        this.activity = activity;
+    public BaseRecyclerAdapter(Context context, int layout) {
+        this.context = context;
         this.layout = layout;
         this.data = new ArrayList<>();
-        inflater = LayoutInflater.from(activity);
+        inflater = LayoutInflater.from(context);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.glyfly.librarys.imagepicker.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -221,7 +222,7 @@ public class ImagesGridFragment extends Fragment implements OnImagesLoadedListen
                             if (holder.cbSelected.isChecked()) {
                                 //had better use ImageView instead of CheckBox
                                 holder.cbSelected.toggle();//do this because CheckBox will auto toggle when clicking,must inverse
-                                String toast = getResources().getString(R.string.you_have_a_select_limit, androidImagePicker.getSelectLimit());
+                                @SuppressLint("StringFormatMatches") String toast = getResources().getString(R.string.you_have_a_select_limit, androidImagePicker.getSelectLimit());
                                 Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
                             } else {
                                 //

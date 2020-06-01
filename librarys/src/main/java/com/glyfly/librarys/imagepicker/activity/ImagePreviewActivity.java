@@ -1,5 +1,6 @@
 package com.glyfly.librarys.imagepicker.activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -62,7 +63,7 @@ public class ImagePreviewActivity extends FragmentActivity implements View.OnCli
                 if (androidImagePicker.getSelectImageCount() > androidImagePicker.getSelectLimit()) {
                     if (mCbSelected.isChecked()) {
                         mCbSelected.toggle();
-                        String toast = getResources().getString(R.string.you_have_a_select_limit, androidImagePicker.getSelectLimit());
+                        @SuppressLint("StringFormatMatches") String toast = getResources().getString(R.string.you_have_a_select_limit, androidImagePicker.getSelectLimit());
                         Toast.makeText(ImagePreviewActivity.this, toast, Toast.LENGTH_SHORT).show();
                     } else {
                         //
@@ -120,6 +121,7 @@ public class ImagePreviewActivity extends FragmentActivity implements View.OnCli
         mCbSelected.setChecked(isSelected);
     }
 
+    @SuppressLint("StringFormatMatches")
     @Override
     public void onImageSelected(int position, ImageItem item, int selectedItemsCount, int maxSelectLimit) {
         if(selectedItemsCount > 0){

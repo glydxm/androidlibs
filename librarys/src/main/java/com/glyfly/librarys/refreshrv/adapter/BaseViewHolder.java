@@ -1,9 +1,10 @@
 package com.glyfly.librarys.refreshrv.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Administrator on 2017/7/26.

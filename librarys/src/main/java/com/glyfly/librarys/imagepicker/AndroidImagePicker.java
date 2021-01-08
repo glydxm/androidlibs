@@ -9,8 +9,9 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
 import android.util.Log;
+
+import androidx.fragment.app.Fragment;
 
 import com.glyfly.librarys.imagepicker.bean.ImageItem;
 import com.glyfly.librarys.imagepicker.bean.ImageSet;

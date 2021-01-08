@@ -2,7 +2,6 @@ package com.glyfly.librarys.imagepicker.activity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.glyfly.librarys.R;
 import com.glyfly.librarys.imagepicker.AndroidImagePicker;

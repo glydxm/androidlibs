@@ -1,8 +1,9 @@
 package com.glyfly.librarys.backgroundlib.view;
 
 import android.content.Context;
-import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.glyfly.librarys.backgroundlib.BackgroundFactory;
 

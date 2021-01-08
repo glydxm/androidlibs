@@ -10,8 +10,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -20,6 +18,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.collection.ArrayMap;
 
 import com.glyfly.librarys.R;
 import com.glyfly.librarys.backgroundlib.drawable.DrawableFactory;

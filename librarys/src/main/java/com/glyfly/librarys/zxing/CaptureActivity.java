@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
-import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.SurfaceHolder;
@@ -24,6 +23,8 @@ import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.RequiresApi;
 
 import com.glyfly.librarys.R;
 import com.glyfly.librarys.zxing.camera.CameraManager;

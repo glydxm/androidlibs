@@ -6,17 +6,17 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ItemDecoration;
 import android.view.View;
+
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Administrator on 2018/5/30.
  */
 
-public class SpacesItemDecoration extends ItemDecoration {
+public class SpacesItemDecoration extends RecyclerView.ItemDecoration {
 
     private Paint mPaint;
     private Drawable mDivider;

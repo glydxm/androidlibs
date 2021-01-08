@@ -1,11 +1,12 @@
 package com.glyfly.librarys.imagepicker.widget.photodrawerview;
 
 import android.content.Context;
-import android.support.v4.view.MotionEventCompat;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.VelocityTracker;
 import android.view.ViewConfiguration;
+
+import androidx.core.view.MotionEventCompat;
 
 public class ScaleDragDetector implements ScaleGestureDetector.OnScaleGestureListener {
 
